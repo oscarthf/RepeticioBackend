@@ -1,3 +1,11 @@
-python manage.py migrate
-python manage.py collectstatic --noinput
-python manage.py runserver --insecure 0.0.0.0:8000
+
+from repeticio_backend.obj.APIServer import RepeticioAPIServer
+
+def main():
+
+    api = RepeticioAPIServer()
+    api.run()
+
+if __name__ == "__main__":
+
+    main()
