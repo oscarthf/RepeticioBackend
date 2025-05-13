@@ -7,13 +7,13 @@ source_folders = [
     "util/prompts"
 ]
 
-project_folder = "language_app_backend"
+project_folder = "repeticio_backend"
 
 source_folders = [
     os.path.join(project_folder, folder) for folder in source_folders
 ]
 
-setup(name="language_app_backend",
+setup(name="repeticio_backend",
         version="0.1",
         description="Backend for language learning app",
         author="Oscar Fernandes",

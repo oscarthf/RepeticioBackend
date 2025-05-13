@@ -8,7 +8,7 @@ from pymongo.server_api import ServerApi
 from ..obj.GlobalContainer import GlobalContainer
 from ..obj.LLM import LLM
 
-logger = logging.getLogger("language_app_backend.util.db")
+logger = logging.getLogger("repeticio_backend.util.db")
 
 def setup_globals():
 
@@ -41,7 +41,7 @@ def get_global_container():
 
 def create_connection():
 
-    connection_string = os.environ.get("LANGUAGE_APP_DB_CONNECTION_STRING")
+    connection_string = os.environ.get("REPETICIO_DB_CONNECTION_STRING")
     client = MongoClient(connection_string, server_api=ServerApi('1'))
 
     return client

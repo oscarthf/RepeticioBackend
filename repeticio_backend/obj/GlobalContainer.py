@@ -194,7 +194,7 @@ class GlobalContainer:
         self.startup_time = int(datetime.datetime.now(datetime.timezone.utc).timestamp())
 
         self.db_client = db_client
-        self.db = db_client["language_app"]
+        self.db = db_client["repeticio"]
         self.servers_collection = self.db["servers"]
         self.settings_collection = self.db["settings"]
         self.words_collection = self.db["words"]
