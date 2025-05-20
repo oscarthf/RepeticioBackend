@@ -1,6 +1,7 @@
 
 
 from flask import Flask, request, jsonify
+from waitress import serve
 
 from ..util.db import get_global_container
 
@@ -197,7 +198,7 @@ class RepeticioAPIServer:
             else:
                 return jsonify({"error": "failed to submit answer"}), 500
 
-        self.app.run(host="0.0.0.0", port=5000)
+        serve(self.app, host="0.0.0.0", port=5000)
 
 if __name__ == "__main__":
 
